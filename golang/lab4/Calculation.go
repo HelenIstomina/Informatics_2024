@@ -2,7 +2,6 @@ package lab4
 
 import (
 	"math"
-	"fmt"
 )
 
 func Calculation(a,b,x float64) float64 {
@@ -10,14 +9,18 @@ func Calculation(a,b,x float64) float64 {
 	return y
 }
 
-func TaskA(a, b, x1, x2, dx float64) {
+func TaskA(a, b, x1, x2, dx float64) []float64 {
+	var y []float64
 	for x := x1; x<=x2; x += dx {
-		fmt.Println(Calculation(a,b,x))
+		y = append(Calculation(a,b,x))
 	}
+	return y
 }
 
-func TaskB(a float64, b float64, x[5] float64) {
+func TaskB(a float64, b float64, x[5] float64) []float64 {
+	var y []float64
 	for _, value := range x {
-		fmt.Println(Calculation(a,b,value))
+		y = append(Calculation(a,b,value))
 	}
+	return y
 }
