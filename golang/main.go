@@ -5,9 +5,6 @@ import (
 	"fmt"
 )
 
-const a float64 = 1.1
-const b float64 = 0.09
-
 func main() {
 	Lab4.RunLab4()
 
