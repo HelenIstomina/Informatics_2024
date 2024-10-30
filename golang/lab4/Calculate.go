@@ -27,8 +27,8 @@ func TaskB(a float64, b float64, x[5] float64) []float64 {
 }
 
 func RunLab4 () {
-	a : = 1.1
-	b : = 0.09
+	a := 1.1
+	b := 0.09
 	
 	fmt.Println(lab4.TaskA(a,b,1.2,2.2,0.2))
 	var s = [5]float64{1.21,1.76,2.53,3.48,4.52}
