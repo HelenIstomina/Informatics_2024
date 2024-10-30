@@ -12,7 +12,7 @@ func Calculate(a,b,x float64) float64 {
 func TaskA(a, b, x1, x2, dx float64) []float64 {
 	var y []float64
 	for x := x1; x<=x2; x += dx {
-		y = append(Calculate(a,b,x))
+		y = append(y, Calculate(a,b,x))
 	}
 	return y
 }
@@ -20,7 +20,7 @@ func TaskA(a, b, x1, x2, dx float64) []float64 {
 func TaskB(a float64, b float64, x[5] float64) []float64 {
 	var y []float64
 	for _, value := range x {
-		y = append(Calculate(a,b,value))
+		y = append(y, Calculate(a,b,value))
 	}
 	return y
 }
