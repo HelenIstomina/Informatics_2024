@@ -2,6 +2,7 @@ package lab4
 
 import (
 	"math"
+	"fmt"
 )
 
 func Calculate(a,b,x float64) float64 {
