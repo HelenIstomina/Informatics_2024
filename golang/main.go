@@ -13,3 +13,5 @@ func main() {
 	var s = [5]float64{1.21,1.76,2.53,3.48,4.52}
 	fmt.Println(lab4.TaskB(a, b, s))
 }
+
+fmt.Println("Istomina_Elena_Sergeevna")
