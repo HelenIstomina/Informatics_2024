@@ -7,7 +7,7 @@ import (
 
 func main() {
 	Lab4.RunLab4()
-	Lab4.RunLab6()
+	lab6.RunLab6()
 
 	fmt.Println("Istomina_Elena_Sergeevna")
 }
