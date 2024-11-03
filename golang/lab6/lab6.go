@@ -7,28 +7,30 @@ import (
 type plane struct {
 	name            string
 	flight_number   int
-	power           int
-	purchased_seats int
+	flight_distance float32
+	passenger_mass  int
 }
 
-func (c plane) speed_calculation(f_air int) int {
-	speed := c.power / f_air
+func (c plane) speed_calculation(time float32) float32 {
+	speed := c.flight_distance / time
 	return speed
 }
 
-func (c plane) revenue_calculation(price_a_place int) int {
-	money := price_a_place * c.purchased_seats
-	return money
-}
 func (c plane) get_routes() string {
-	routes := []string{1: "Paris-Moscow", 2: "Moscow-Paris", 3: "Moscow-Seoul", 4: "Seoul-Moscow"}
-	nomer := routes[c.flight_number]
-	return nomer
+	routes := []string{1: "Москва--Санкт-Петербург", 2: "Москва-Сочи", 3: "Мюнхен-Берлин", 4: "Нью-Йорк--Лос-Анджелес"}
+	number := routes[c.flight_number]
+	return number
+}
+
+func (c plane) load_capacity_calculation(luggage_mass int) int {
+	load_capacity := luggage_mass + c.passenger_mass
+	return load_capacity
 }
 
 func RunLab6() {
-	Plane := plane{"Airobus999", 3, 200000, 150}
-	fmt.Printf("Скорось %v равна %d м/с\n", Plane.name, Plane.speed_calculation(5000))
-	fmt.Printf("Прибыль с продажи белетов составляет: %d рублей \n", Plane.revenue_calculation(23000))
-	fmt.Printf("%v летит по маршруту %v\n", Plane.name, Plane.get_routes())
+	Plane := plane{"Super Jet", 4, 3937.6, 10}
+	fmt.Printf("Скорость самолета %v равна %.1f км/ч\n", Plane.name, Plane.speed_calculation(4.4))
+	fmt.Printf("Самолет %v преодолеет расстояние в %.0f км\n", Plane.name, Plane.flight_distance)
+	fmt.Printf("Полезная нагрузка самолета %d тонн \n", Plane.load_capacity_calculation(27))
+	fmt.Printf("Самолет %v летит по маршруту номер %v - %v\n", Plane.name, Plane.flight_number, Plane.get_routes())
 }
