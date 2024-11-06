@@ -28,7 +28,7 @@ func (c Plane) Load_capacity_calculation(luggage_mass int) int {
 }
 
 func RunLab6() {
-	Plane := plane{"Super Jet", 4, 3937.6, 10}
+	Plane := Plane{"Super Jet", 4, 3937.6, 10}
 	fmt.Printf("Скорость самолета %v равна %.1f км/ч\n", Plane.name, Plane.speed_calculation(4.4))
 	fmt.Printf("Самолет %v преодолеет расстояние в %.0f км\n", Plane.name, Plane.flight_distance)
 	fmt.Printf("Полезная нагрузка самолета %d тонн \n", Plane.load_capacity_calculation(27))
