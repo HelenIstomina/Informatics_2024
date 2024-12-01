@@ -42,5 +42,5 @@ func RunLab7() {
 	Dress.GetDescription()
 
 	sum = CalculatePrice(purchase)
-	fmt.Println("Общая стоимость списка товаров с учетом скидок:", sum)
+	fmt.Println("Общая стоимость списка товаров с учетом всех скидок:", sum)
 }
