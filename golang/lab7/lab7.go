@@ -19,9 +19,9 @@ func CalculatePrice(list []Product) float64 {
 }
 
 func RunLab7() {
-	var CatFood Product = &PetFood{"Orijen Cat&Kitten Grin Free", "Orijen", 9900}
-	var Microwave_oven Product = &HouseholdGoods{"Hotpoint MWHA 201", 10490}
-	var Dress Product = &Clothes{"гипюровое платье", "полиэстера", "DStrend", 5983}
+	var CatFood Product = &CatFood{"Orijen Cat&Kitten Grin Free", "Orijen", 9900}
+	var Microwave_oven Product = &Microwave_oven{"Hotpoint MWHA 201", 10490}
+	var Dress Product = &Dress{"гипюровое платье", "полиэстера", "DStrend", 5983}
 
 	CatFood.GetDescription()
 	Microwave_oven.GetDescription()
