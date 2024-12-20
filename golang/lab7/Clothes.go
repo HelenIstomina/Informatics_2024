@@ -2,29 +2,29 @@ package lab7
 
 import "fmt"
 
-type Clothes struct {
+type Dress struct {
 	Description string
 	Fabric string
 	Brand string
 	Price float64
 }
 
-func (f Clothes) GetDescription() {
+func (f Dress) GetDescription() {
 	fmt.Println("Это", f.Description, "из", f.Fabric, "от бренда", f.Brand ,"стоимостью", f.Price)
 }
 
-func (f Clothes) GetPrice() float64 {
+func (f Dress) GetPrice() float64 {
 	return f.Price
 }
 
-func (f *Clothes) ApplyDiscount(x float64) {
+func (f *Dress) ApplyDiscount(x float64) {
 	(*f).Price = (f.Price) * (x)
 }
 
-func (f *Clothes) SetNewPrice(x float64) {
+func (f *Dress) SetNewPrice(x float64) {
 	(*f).Price = x
 }
 
-func (f *Clothes) SetNewDescription(x string) {
+func (f *Dress) SetNewDescription(x string) {
 	(*f).Fabric = x
 }
