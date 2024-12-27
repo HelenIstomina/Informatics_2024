@@ -60,6 +60,7 @@ func SearchInFile(name string, ValueFile string) {
 	}
 }
 
+
 func RunLab8() []string {
 	var NameFile string
 	fmt.Print("Введите название файла: ")
