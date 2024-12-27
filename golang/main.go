@@ -9,6 +9,7 @@ import (
 func main() {
 	lab6.RunLab6()
 	lab7.RunLab7()
+	lab8.RunLab8()
 
 	fmt.Println("Istomina_Elena_Sergeevna")
 }
