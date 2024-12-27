@@ -3,6 +3,7 @@ package main
 import (
 	"isuct.ru/informatics2022/lab6"
 	"isuct.ru/informatics2022/lab7"
+	"isuct.ru/informatics2022/lab8"
 	"fmt"
 )
 
