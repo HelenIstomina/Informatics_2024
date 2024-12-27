@@ -22,7 +22,6 @@ func TaskA(a, b, x1, x2, dx float64) []float64 {
 }
 
 func TaskB(a float64, b float64, x[] float64) []float64 {
-	var y []float64
 	var arr []float64
 	for _, value := range x {
 		arr = append(arr, Calculate(a,b, value))
