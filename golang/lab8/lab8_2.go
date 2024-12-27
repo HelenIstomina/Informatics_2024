@@ -3,6 +3,7 @@ package lab8
 import (
 	"fmt"
 	"os"
+	"io"
 	"strings"
 )
 
