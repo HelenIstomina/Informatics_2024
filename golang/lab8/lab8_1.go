@@ -7,7 +7,7 @@ import (
 	"strconv"
 )
 
-type Parameters struct {
+type Params struct {
 	A     float64
 	B     float64
 	x1    float64
@@ -16,10 +16,10 @@ type Parameters struct {
 	slice []float64
 }
 
-func ReadFromFile(filename string) (Parameters, error) {
+func LoadParameters(filename string) (Params, error) {
 	file, err := os.Open(filename)
 	if err != nil {
-		return Parameters{}, fmt.Errorf("Ошибка открытия: %w", err)
+		return Params{}, fmt.Errorf("Не удалось открыть файл: %w", err)
 	}
 	defer file.Close()
 
@@ -29,18 +29,18 @@ func ReadFromFile(filename string) (Parameters, error) {
 		line := scanner.Text()
 		num, err := strconv.ParseFloat(line, 64)
 		if err != nil {
-			return Parameters{}, fmt.Errorf("ошибка парсинга float '%s': %w", line, err)
+			return Params{}, fmt.Errorf("Ошибка преобразования строки '%s' в float: %w", line, err)
 		}
 		values = append(values, num)
 	}
 
 	if err := scanner.Err(); err != nil {
-		return Parameters{}, fmt.Errorf("ошибка чтения файла: %w", err)
+		return Params{}, fmt.Errorf("ошибка при чтении файла: %w", err)
 	}
 	if len(values) < 6 {
-		return Parameters{}, fmt.Errorf("Недостаточно значений. Введите еще раз")
+		return Params{}, fmt.Errorf("Недостаточно значений. Введите еще раз")
 	}
-	params := Parameters{
+	parameters := Params{
 		A:     values[0],
 		B:     values[1],
 		x1:    values[2],
@@ -48,5 +48,5 @@ func ReadFromFile(filename string) (Parameters, error) {
 		dx:    values[4],
 		slice: values[5:],
 	}
-	return params, nil
+	return parameters, nil
 }
