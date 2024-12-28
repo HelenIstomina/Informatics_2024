@@ -41,6 +41,6 @@ func RunLab7() {
 	Microwave_oven.GetDescription()
 	Dress.GetDescription()
 
-	TotalCost = CalculatePrice(purchase)
+	totalCost = CalculatePrice(purchase)
 	fmt.Println("Общая стоимость списка товаров с учетом всех скидок:", totalCost)
 }
